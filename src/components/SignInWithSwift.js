@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SwiftAuth from './SwiftAuth';
+import SwiftAuth from '../SwiftAuth';
 import Button from '@material-ui/core/Button';
 import SwiftIcon from './SwiftIcon';
 
