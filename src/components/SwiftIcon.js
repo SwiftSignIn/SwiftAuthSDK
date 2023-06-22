@@ -1,13 +1,20 @@
 import React from 'react';
-import myCustomIcon from '../images/swiftWhiteBackgroundCenter.png';
+import blackIcon from '../images/swift-icon-only-black.png';
+import whiteIcon from '../images/swift-icon-only-white.png';
 
-const SwiftIcon = (props) => {
+const SwiftIcon = ({ theme, style }) => {
     return (
       <img
-        src={myCustomIcon}
+        src={theme === 'light' ? blackIcon : whiteIcon}
         alt="My Custom Icon"
-        style={{ width: '75%', height: '75%', ...props.style }}
+        style={{ 
+            width: '75%', 
+            height: '75%', 
+            backgroundColor: theme === 'light' ? 'white' : 'black', 
+            ...style 
+        }}
       />
     );
-  };
+};
+
 export default SwiftIcon;

@@ -2,13 +2,22 @@ import React, { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import SwiftIcon from './SwiftIcon';
 
-const SignInWithSwift = ({ config, handleClick }) => {
+const SignInWithSwift = ({ theme, handleClick }) => {
+    
+    const btnStyle = {
+        color: theme === 'light' ? 'black' : 'white',
+        backgroundColor: theme === 'light' ? 'white' : 'black',
+        border: '1px solid',
+        borderColor: theme === 'light' ? 'black' : 'white',
+        textTransform: 'none',
+    };
+
     return (
         <Button
             variant="contained"
-            color="default"
-            startIcon={<SwiftIcon />}
-            onClick={handleClick || console.log("You haven't overridden this prop \'handleClick\' yet!")}
+            style={btnStyle}
+            startIcon={<SwiftIcon theme={theme} />}
+            onClick={handleClick}
         >
             Sign in with Swift
         </Button>
