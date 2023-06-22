@@ -1,0 +1,39 @@
+{
+    "name": "swift-auth-sdk",
+    "version": "1.0.0",
+    "description": "SDK for integrating Swift authentication into your applications",
+    "main": "index.js",
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/your-username/your-repo.git"
+    },
+    "keywords": [
+      "swift",
+      "authentication",
+      "sdk"
+    ],
+    "author": "Luke Blauvelt",
+    "license": "Apache-2.0",
+    "dependencies": {
+      "axios": "^0.24.0",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-scripts": "5.0.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.16.12",
+      "@babel/preset-env": "^7.16.11",
+      "@babel/preset-react": "^7.16.7",
+      "babel-loader": "^8.2.3",
+      "dotenv": "^10.0.0",
+      "webpack": "^5.67.0",
+      "webpack-cli": "^4.9.2"
+    }
+  }
+  
