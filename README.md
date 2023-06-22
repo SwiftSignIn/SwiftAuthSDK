@@ -14,9 +14,11 @@ You can install using `yarn` or `npm`_:
 Extras
 ------
 
-swift-auth-sdk has few extras that you can install. For example::
+[swift-auth-sdk](https://github.com/SwiftSignIn/SwiftAuthClient) has few extras that you can install. For example::
 
-    $ pip install google-auth[pyopenssl]
+    $ yarn add swift-auth-client
+    $ npm install swift-auth-client
+
 
 TODO
 
@@ -41,6 +43,7 @@ Contributions to this library are always welcome and highly encouraged.
 See `CONTRIBUTING.MD`_ for more information on how to get started.
 
 .. _CONTRIBUTING.md: https://github.com/SwiftSignIn/SwiftAuthSDK/blob/main/CONTRIBUTING
+
 License
 -------
 
