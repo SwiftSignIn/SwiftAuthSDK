@@ -16,7 +16,7 @@ const SignInWithSwift = ({ theme, handleClick }) => {
         <Button
             variant="contained"
             style={btnStyle}
-            startIcon={<SwiftIcon lightTheme={theme === 'light'} />}
+            startIcon={<SwiftIcon theme={theme} />}
             onClick={handleClick}
         >
             Sign in with Swift
