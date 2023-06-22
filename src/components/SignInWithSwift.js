@@ -1,30 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import SwiftAuth from '../SwiftAuth';
 import Button from '@material-ui/core/Button';
 import SwiftIcon from './SwiftIcon';
 
-const SignInWithSwift = ({ config }) => {
-    const [swiftAuthState, setSwiftAuthState] = useState(null);
+const SignInWithSwift = ({ theme, handleClick }) => {
     
-    const swiftAuth = new SwiftAuth(config);
-
-    useEffect(() => {
-        swiftAuth.generateAuthRequest()
-            .then(setSwiftAuthState)
-            .catch(console.error);
-    }, []);
-
-    const handleClick = () => {
-        swiftAuth.pollForAuthStatus()
-            .then(setSwiftAuthState)
-            .catch(console.error);
+    const btnStyle = {
+        color: theme === 'light' ? 'black' : 'white',
+        backgroundColor: theme === 'light' ? 'white' : 'black',
+        border: '1px solid',
+        borderColor: theme === 'light' ? 'black' : 'white',
+        textTransform: 'none',
     };
 
     return (
         <Button
             variant="contained"
-            color="default"
-            startIcon={<SwiftIcon />}
+            style={btnStyle}
+            startIcon={<SwiftIcon lightTheme={theme === 'light'} />}
             onClick={handleClick}
         >
             Sign in with Swift
