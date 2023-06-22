@@ -1,3 +1,3 @@
-import SwiftAuth from './SwiftAuth';
+import SignInWithSwift from './components/SignInWithSwift';
 
-export default SwiftAuth;
+export default SignInWithSwift;

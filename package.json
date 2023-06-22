@@ -1,6 +1,6 @@
 {
     "name": "swift-auth-sdk",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "SDK for integrating Swift authentication into your applications",
     "main": "index.js",
     "scripts": {
