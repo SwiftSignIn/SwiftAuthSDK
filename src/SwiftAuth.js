@@ -9,7 +9,13 @@ class SwiftAuth {
             isAuthenticated: false,
             isPairing: false,
         };
-        this.client = axios.create({ baseURL: config.host, headers: { 'Content-Type': 'application/json', 'Authorization': this.config.authorization } });
+        this.client = axios.create({
+            baseURL: config.host,
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Basic ${Buffer.from(`${config.clientId}:${config.clientSecret}`).toString('base64')}`,
+            },
+          });
     }
 
     async generateAuthRequest() {
