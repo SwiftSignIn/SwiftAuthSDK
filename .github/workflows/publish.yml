@@ -1,4 +1,6 @@
 name: Node.js Package
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 on:
   push:
