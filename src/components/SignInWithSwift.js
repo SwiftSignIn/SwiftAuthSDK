@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 import SwiftIcon from './SwiftIcon';
 
 const SignInWithSwift = ({ theme, handleClick }) => {
-    // test
     const btnStyle = {
         color: theme === 'light' ? 'black' : 'white',
         backgroundColor: theme === 'light' ? 'white' : 'black',
