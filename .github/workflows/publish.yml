@@ -26,6 +26,7 @@ jobs:
         git config user.name "Luke Blauvelt"
         git config user.email "lukeblauvelt@gmail.com"
         npm version patch -m "Upgrade to %s"
+        git remote set-url origin https://x-access-token:${GH_PAT}@github.com/SwiftSignIn/SwiftAuthSDK.git
         git push --tags
         npm publish
       env:
