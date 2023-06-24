@@ -1,7 +1,8 @@
 name: Node.js Package
 
 env:
-  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  GH_PAT: ${{ secrets.GH_PAT }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 on:
   push:
@@ -28,5 +29,5 @@ jobs:
         git push --tags
         npm publish
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_PAT: ${{ secrets.GH_PAT }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
