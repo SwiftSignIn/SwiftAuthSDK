@@ -63,7 +63,7 @@ perf: A code change that improves performance
 test: Adding missing tests or correcting existing tests
 chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
 For example:
-```git commit -m "feat(user-auth): add oauth2 authentication"```
+`git commit -m "feat(user-auth): add oauth2 authentication"`
 Run standard-version: When you're ready to release a new version, simply run npm run release or yarn release. This will do the following:
 
 Bump the version in metadata files (like package.json)
@@ -80,4 +80,4 @@ Determine the next semantic version number based on your commit messages.
 Update the version number in your package.json.
 Generate or update your CHANGELOG.md.
 Commit these changes and create a new version tag.
-Then you can push your changes and the new tag to your repository with git push --follow-tags.
+Run `git push --follow-tags origin main && npm publish` to publish
