@@ -52,32 +52,8 @@ Apache 2.0 - See `the LICENSE`_ for more information.
 .. _the LICENSE: https://github.com/SwiftSignIn/SwiftAuthSDK/blob/main/LICENSE
 
 ##Versioning
-Use conventional commits: For standard-version to work correctly, your commits should follow the conventional commit format. The format of a commit message should be type(scope): subject, where type can be one of the following:
-
-feat: A new feature
-fix: A bug fix
-docs: Documentation changes
-style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-refactor: A code change that neither fixes a bug nor adds a feature
-perf: A code change that improves performance
-test: Adding missing tests or correcting existing tests
-chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
-For example:
-`git commit -m "feat(user-auth): add oauth2 authentication"`
-Run standard-version: When you're ready to release a new version, simply run npm run release or yarn release. This will do the following:
-
-Bump the version in metadata files (like package.json)
-Use conventional-changelog to update CHANGELOG.md
-Commit package.json (or other metadata file) and CHANGELOG.md
-Tag a new release
-Here's the usual workflow:
-
-You make changes to your code.
-Stage those changes with git add .
-Commit those changes with a conventional commit message, like git commit -m "feat: add new feature"
-Once all your changes are committed, you can run npm run release. This will:
-Determine the next semantic version number based on your commit messages.
-Update the version number in your package.json.
-Generate or update your CHANGELOG.md.
-Commit these changes and create a new version tag.
-Run `git push --follow-tags origin main && npm publish` to publish
+Make some changes to your code and commit them with git commit.
+Run npm version patch (or minor or major, depending on the change) to bump the version in package.json. This will also create a new commit and tag.
+Push the commit and tag to GitHub with git push --follow-tags.
+The GitHub Actions workflow will then trigger on this push, and it will publish your new version to npm.
+This way, you're doing the version bump locally, but the publishing is automated with GitHub Actions.
